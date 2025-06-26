@@ -3,7 +3,9 @@ How to Run
 Steps:
 
 cd path/to/ChronosCouriers
+
 javac *.java
+
 java ChronosCouriersApp
 
 *******************************************
@@ -68,10 +70,16 @@ EXIT
 Sample Flow
 
 ADD_RIDER rider1 5 true
+
 PLACE_ORDER pkg1 EXPRESS 1720000000000 true
+
 ASSIGN
+
 STATUS
+
 DELIVER pkg1
+
 AUDIT
+
 
 *******************************************
