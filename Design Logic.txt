@@ -1,0 +1,37 @@
+Object-Oriented Design
+
+The system is built with modular, extensible OOP principles. Each core concept is modeled as a class:
+
+Package: Represents a delivery order with priority, deadline, and fragility.
+
+Rider: Tracks rider availability, reliability, and capability to handle fragile items.
+
+DispatchCenter: Acts as the central coordinator, handling command input, assignment logic, audit trail, and system state.
+
+This separation ensures single responsibility, testability, and future extensibility (e.g., supporting location-based assignments or different vehicle types).
+
+
+
+Core Algorithms & Data Structures
+ Package Prioritization
+Packages are stored in a PriorityQueue<Package> sorted by:
+
+Priority (EXPRESS > STANDARD)
+
+Sooner delivery deadline
+
+Earlier order time (FIFO)
+
+This ensures urgent and time-sensitive deliveries are always picked first.
+
+
+
+Rider Assignment Logic
+When assigning:
+
+Only online and unassigned riders are considered
+
+Riders must be able to handle fragile items if required
+
+Among eligible riders, the one with the highest reliability is chosen using:
+

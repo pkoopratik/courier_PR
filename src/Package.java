@@ -41,4 +41,7 @@ public class Package implements Comparable<Package> {
     public String toString() {
         return String.format("[%s] %s (%s) deadline:%d rider:%s", id, priority, status, deadline, assignedRiderId);
     }
+    public PackagePriority getPriority() {
+    return this.priority;
+}
 }

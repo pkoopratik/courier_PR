@@ -111,4 +111,17 @@ public class DispatchCenter {
         if (r == null) throw new IllegalArgumentException("Rider not found: " + id);
         return r;
     }
+
+    //Testing methods
+    public Map<String, Rider> getRiders() {
+        return riders;
+    }
+
+    public Map<String, Package> getAllPackages() {
+        return allPackages;
+    }
+
+    public List<String> getAuditTrail() {
+        return auditTrail;
+    }
 }

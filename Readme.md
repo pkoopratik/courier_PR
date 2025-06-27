@@ -4,9 +4,28 @@ Steps:
 
 cd path/to/ChronosCouriers
 
-javac *.java
 
-java ChronosCouriersApp
+javac -d out src/*.java
+
+
+java -cp out ChronosCouriersApp
+
+
+
+*****
+
+
+Steps to run tests
+
+cd path/to/ChronosCouriers
+
+
+javac -d out -cp "lib\\junit-platform-console-standalone-1.10.0.jar" src\\*.java test\\*.java
+
+
+java -jar lib\\junit-platform-console-standalone-1.10.0.jar --class-path out --scan-class-path
+
+
 
 *******************************************
 Supported Commands
